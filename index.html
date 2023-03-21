@@ -12,6 +12,15 @@
 </head>
 
 <body>
+  <!-- canh lề -->
+  <div class="d-flex justify-content-start">trái hết</div>
+  <div class="d-flex justify-content-end">phải hết</div>
+  <div class="d-flex justify-content-center">giữa hết</div>
+  <div class="d-flex justify-content-between">chia đều khoảng cách giữa các block</div>
+  <div class="d-flex justify-content-around">...</div>
+  <div class="d-flex justify-content-evenly">khoảng cách đều</div>
+  
+  
   
   <!-- model -->
   <script>
@@ -19,6 +28,18 @@
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
   </script>
   
+  <!-- toasts -->
+  <script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
+  })
+}
+  </script>
   
 </body>
 </html>
