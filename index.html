@@ -22,13 +22,15 @@
   
   
   <!--scrollspy-->
-  document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
-    el.addEventListener('shown.bs.tab', () => {
-      const target = el.getAttribute('data-bs-target')
-      const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
-      bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
+  <script>
+    document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
+      el.addEventListener('shown.bs.tab', () => {
+        const target = el.getAttribute('data-bs-target')
+        const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
+        bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
+      })
     })
-  })
+  </script>
   
   
   <!-- model -->
@@ -39,15 +41,15 @@
   
   <!-- toasts -->
   <script>
-  const toastTrigger = document.getElementById('liveToastBtn')
-  const toastLiveExample = document.getElementById('liveToast')
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
 
-  if (toastTrigger) {
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-    toastTrigger.addEventListener('click', () => {
-      toastBootstrap.show()
-    })
-  }
+    if (toastTrigger) {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+      toastTrigger.addEventListener('click', () => {
+        toastBootstrap.show()
+      })
+    }
   </script>
   
 </body>
